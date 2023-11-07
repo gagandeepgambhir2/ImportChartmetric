@@ -45,8 +45,8 @@ class ImportChartReport implements ShouldQueue
         $artist = explode(":",$artistId);
         $chartMetricService = new ChartMetricService;
         $sources = ['spotify','instagram','soundcloud','tiktok','twitter','youtube_channel'];
-        $since = '2023-01-01';
-        $until = '2023-11-06';
+        $since = '2023-11-07';
+        $until = '2023-11-07';
         $stat = [];
         if($artist[2] && !empty($artist[2]))
         {
@@ -135,8 +135,8 @@ class ImportChartReport implements ShouldQueue
 
     public function putUser($artistId,$aritstName,$stats,$spotifyArtistId)
     {
-        $since = Carbon::parse('2023-01-01');
-        $until = '2023-11-06';
+        $since = Carbon::parse('2023-11-07');
+        $until = '2023-11-07';
         $dates = [];
         // Loop through the dates and add them to the array
         while ($since <= $until) {
